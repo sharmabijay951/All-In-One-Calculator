@@ -1,0 +1,170 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    background: white;
+    width: 100%;
+    max-width: 400px; /* Phone size look */
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Tabs Styling */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background: #f1f3f4;
+    padding: 5px;
+    border-radius: 12px;
+}
+
+.tab-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #666;
+    transition: 0.3s;
+}
+
+.tab-btn.active {
+    background: #fff;
+    color: #4CAF50;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Hidden Utility */
+.hidden {
+    display: none;
+}
+
+/* 1. Calculator Styles */
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 2rem;
+    text-align: right;
+    border: none;
+    background: #f8f9fa;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #333;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.buttons-grid button {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    background: #f1f3f4;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buttons-grid button:active {
+    transform: scale(0.95);
+}
+
+.operator-btn { color: #4CAF50; font-weight: bold; }
+.action-btn { color: #ff5252; font-weight: bold; }
+.equal-btn {
+    grid-column: span 2;
+    background-color: #4CAF50 !important;
+    color: white;
+}
+
+/* 2. Age Calculator Styles */
+.input-group {
+    margin-bottom: 15px;
+}
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+.result-box {
+    margin-top: 15px;
+    padding: 15px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* 3. Password Generator Styles */
+.password-display {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+#password-output {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+.controls {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+.checkboxes label {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.main-btn {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
