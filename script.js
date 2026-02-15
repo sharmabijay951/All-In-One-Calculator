@@ -107,3 +107,29 @@ function copyPassword() {
     document.execCommand("copy"); // Mobile friendly copy
     alert("Password Copied!");
 }
+// --- 5. Time Calculator Logic ---
+function calculateTime(operation) {
+    let h1 = parseInt(document.getElementById('h1').value) || 0;
+    let m1 = parseInt(document.getElementById('m1').value) || 0;
+    let h2 = parseInt(document.getElementById('h2').value) || 0;
+    let m2 = parseInt(document.getElementById('m2').value) || 0;
+
+    let totalMinutes1 = (h1 * 60) + m1;
+    let totalMinutes2 = (h2 * 60) + m2;
+    let resultMinutes;
+
+    if (operation === 'add') {
+        resultMinutes = totalMinutes1 + totalMinutes2;
+    } else {
+        resultMinutes = totalMinutes1 - totalMinutes2;
+    }
+
+    let rH = Math.floor(Math.abs(resultMinutes) / 60);
+    let rM = Math.abs(resultMinutes) % 60;
+    
+    const resultBox = document.getElementById('time-result');
+    let prefix = resultMinutes < 0 ? "-" : "";
+    
+    resultBox.innerHTML = `Result: <strong>${prefix}${rH} Hours ${rM} Minutes</strong>`;
+    resultBox.classList.remove('hidden');
+}
