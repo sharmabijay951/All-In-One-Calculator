@@ -168,3 +168,16 @@ input[type="range"] {
     font-size: 1rem;
     cursor: pointer;
 }
+.input-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.input-row input {
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+    border: 2px solid #eee;
+    border-radius: 8px;
+}
