@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-In-One Tools</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <h1>All-In-One Toolkit</h1>
+        
+        <div class="tabs">
+            <button onclick="showTab('math')" class="tab-btn active">Calculator</button>
+            <button onclick="showTab('age')" class="tab-btn">Age</button>
+            <button onclick="showTab('password')" class="tab-btn">Password</button>
+        </div>
+
+        <div id="math" class="tool-section">
+            <input type="text" id="display" disabled placeholder="0">
+            <div class="buttons-grid">
+                <button onclick="clearDisplay()" class="action-btn">AC</button>
+                <button onclick="deleteLast()" class="action-btn">DEL</button>
+                <button onclick="appendToDisplay('%')" class="action-btn">%</button>
+                <button onclick="appendToDisplay('/')" class="operator-btn">÷</button>
+                
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('*')" class="operator-btn">×</button>
+                
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('-')" class="operator-btn">−</button>
+                
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+                
+                <button onclick="appendToDisplay('00')">00</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button onclick="calculateResult()" class="equal-btn">=</button>
+            </div>
+        </div>
+
+        <div id="age" class="tool-section hidden">
+            <h3>Age Calculator</h3>
+            <div class="input-group">
+                <label>Date of Birth:</label>
+                <input type="date" id="dob">
+            </div>
+            <button onclick="calculateAge()" class="main-btn">Calculate Age</button>
+            <div id="age-result" class="result-box hidden">
+                </div>
+        </div>
+
+        <div id="password" class="tool-section hidden">
+            <h3>Password Generator</h3>
+            <div class="password-display">
+                <input type="text" id="password-output" readonly placeholder="Your Password">
+                <button onclick="copyPassword()" title="Copy">📋</button>
+            </div>
+            
+            <div class="controls">
+                <label>Length: <span id="length-val">8</span></label>
+                <input type="range" id="length" min="6" max="20" value="8" oninput="updateLengthLabel()">
+                
+                <div class="checkboxes">
+                    <label><input type="checkbox" id="include-numbers" checked> Numbers (123)</label>
+                    <label><input type="checkbox" id="include-symbols" checked> Symbols (@#$)</label>
+                </div>
+            </div>
+            <button onclick="generatePassword()" class="main-btn">Generate New</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
