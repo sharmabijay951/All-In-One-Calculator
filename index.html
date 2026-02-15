@@ -16,6 +16,7 @@
             <button onclick="showTab('math')" class="tab-btn active">Calculator</button>
             <button onclick="showTab('age')" class="tab-btn">Age</button>
             <button onclick="showTab('password')" class="tab-btn">Password</button>
+            <button onclick="showTab('time')" class="tab-btn">Time</button>
         </div>
 
         <div id="math" class="tool-section">
@@ -77,6 +78,23 @@
             </div>
             <button onclick="generatePassword()" class="main-btn">Generate New</button>
         </div>
+
+        <div id="time" class="tool-section hidden">
+    <h3>Time Calculator</h3>
+    <div class="input-row">
+        <input type="number" id="h1" placeholder="HH"> : 
+        <input type="number" id="m1" placeholder="MM">
+    </div>
+    <div class="input-row" style="margin-top: 10px;">
+        <input type="number" id="h2" placeholder="HH"> : 
+        <input type="number" id="m2" placeholder="MM">
+    </div>
+    <div style="margin: 15px 0;">
+        <button onclick="calculateTime('add')" class="main-btn" style="width: 48%; display: inline-block;">Add (+)</button>
+        <button onclick="calculateTime('sub')" class="main-btn" style="width: 48%; display: inline-block; background: #ff5252;">Sub (-)</button>
+    </div>
+    <div id="time-result" class="result-box hidden"></div>
+</div>
 
     </div>
 
